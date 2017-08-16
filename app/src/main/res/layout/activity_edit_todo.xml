@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/todo_edit_app_bar_height"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/todo_edit_margin_top"/>
+
+        <EditText
+            android:id="@+id/toto_detail_todo_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/todo_edit_margin_bottom"
+            android:singleLine="true"
+            android:textSize="@dimen/todo_edit_font_size"
+            android:hint="@string/whats_next"
+            tools:text="todo"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/todo_detail_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:src="@drawable/ic_done_white_24dp"
+        app:layout_anchor="@+id/appbar"
+        app:layout_anchorGravity="bottom|end" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/todo_edit_body_margin_top"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/todo_detail_complete_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginBottom="6dp">
+
+            <CheckBox
+                android:id="@+id/todo_detail_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4.5dp"
+                android:layout_marginRight="-5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_small"
+                android:text="@string/completed"
+                android:textSize="@dimen/todo_edit_body_font_size"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/icon_24dp"
+                android:layout_height="@dimen/icon_24dp"
+                android:src="@drawable/ic_alarm_black_24dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/todo_detail_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/spacing_small"
+                android:textSize="@dimen/todo_edit_body_font_size"
+                android:background="?attr/selectableItemBackground"
+                tools:text="Wed, Jan 27, 2016"/>
+
+            <TextView
+                android:id="@+id/todo_detail_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_medium"
+                android:textSize="@dimen/todo_edit_body_font_size"
+                android:background="?attr/selectableItemBackground"
+                tools:text="6:00"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/todo_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:layout_gravity="end"
+            android:text="@string/action_delete"
+            style="@style/AppTheme.TextView.DeleteButton"/>
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

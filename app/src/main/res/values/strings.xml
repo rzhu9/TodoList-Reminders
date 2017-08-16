@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TodoList</string>
+    <string name="whats_next">what\'s next</string>
+    <string name="completed">Completed</string>
+    <string name="action_delete">Delete</string>
+    <string name="set_date">Set date</string>
+    <string name="set_time">Set time</string>
+</resources>
